@@ -1,0 +1,11 @@
+com\mycompany\taller8\Taller8.class
+model\Categoria.class
+dao\CategoriaDAO.class
+vista\VentanaInventario.class
+vista\VentanaInventario$1.class
+vista\Principal.class
+model\Producto.class
+vista\VentanaInventario$2.class
+dao\ProductoDAO.class
+vista\Principal$1.class
+conexion\Conexion.class
