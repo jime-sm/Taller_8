@@ -56,3 +56,10 @@ d) Ventajas de la arquitectura y cambio a PostgreSQL
 ¿Por qué dividirlo en paquetes? Porque separa responsabilidades. Para cuando se requiera cambiar la interfaz gráfica, no tienes que tocar nada de la base de datos ni de los DAO y el código se mantiene más limpio y cómodo de mantener.
 
 ¿Qué cambiaría si usamos xampp? tendriamos  que cambiar la dependencia del driver en el pom.xml y actualizar la URL y el nombre del driver en Conexion.java. Los modelos, los DAO y la vista se quedan exactamente igual.
+
+7
+1. **Filtro por Categoría:** Se agregó un `JComboBox` adicional en la parte superior de la ventana (`VentanaInventario.java`) que permite listar únicamente los productos de una categoría seleccionada o elegir "Todas las categorías". Para lograr esto, se implementó en `ProductoDAO.java` el método `listarPorCategoria(int idCategoria)` usando una consulta con `JOIN` y `PreparedStatement`.
+   <img width="588" height="166" alt="image" src="https://github.com/user-attachments/assets/ec343809-dd8b-40ea-a2f4-78c792502c34" />
+
+2. **Alerta visual de stock bajo:** Se personalizó el renderizador de la `JTable` para que pinte de un **tono rojo suave** aquellas filas donde la cantidad de productos sea menor a 5, facilitando la visualización rápida del inventario que necesita reposición.
+<img width="634" height="530" alt="image" src="https://github.com/user-attachments/assets/29e997e0-ba79-4d75-84b7-9647c176ab25" />
